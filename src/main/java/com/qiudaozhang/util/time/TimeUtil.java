@@ -47,19 +47,26 @@ public class TimeUtil {
         return localDateTime2Date(curr);
     }
 
+    /**
+     * 当前日期+时间
+     * @return
+     */
     public static LocalDateTime currLocalDateTime(){
          return LocalDateTime.now();
     }
 
     /**
-     * 当前日期 2020-10-20
-     * 也相当于一个当天的开始 2020年10月20日 0时0分0秒
+     * 当天的开始，没有时间
      * @return
      */
-    public static Date currDate(){
+    public static Date todayNoTime(){
         return Date.from(LocalDate.now().atStartOfDay().atZone(defaultZoneId()).toInstant());
     }
 
+    /**
+     * 默认的区域id
+     * @return
+     */
     public static ZoneId defaultZoneId(){
         return ZoneId.systemDefault();
     }
