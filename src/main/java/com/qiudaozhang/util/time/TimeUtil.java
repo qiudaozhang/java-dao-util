@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * @author 邱道长
  * 2020/10/20
- * 日期工具类
+ * 时间相关工具类（日期 时间都包含）
  */
 public class TimeUtil {
 
@@ -88,8 +88,38 @@ public class TimeUtil {
     }
 
 
+    /**
+     * 今天
+     * @return
+     */
+    public static LocalDate today() {
+        return LocalDate.now();
+    }
+
+    public static LocalDate tomorrow(){
+        return today().plusDays(1);
+    }
+
+    public static LocalDate yesterday(){
+        return today().plusDays(-1);
+    }
+
+    public static LocalDate beginOfYear(){
+        return today().withDayOfYear(1);
+    }
+
+    public static LocalDate nextYear(){
+        return beginOfYear().plusYears(1);
+    }
+
+
 
     public static void main(String[] args) {
+        System.out.println(nextYear());
+//        System.out.println(beginOfYear());
+//        System.out.println(yesterday());
+//        System.out.println(today());
+//        System.out.println(tomorrow());
 //        System.out.println(currDate());
 //        System.out.println(currDateTime());
 //        System.out.println(localDateTime2Date(LocalDateTime.now()));
