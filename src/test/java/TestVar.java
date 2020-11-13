@@ -1,5 +1,7 @@
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 
 @Test
 public class TestVar {
@@ -17,4 +19,13 @@ public class TestVar {
                 """;
         System.out.println(bt);
     }
+
+    public void usa2cn(){
+        // Jul-28-2020 02:57:33 AM +UTC
+
+        String s = "Jul-28-2020 02:57:33 AM +UTC";
+
+
+    }
+
 }
